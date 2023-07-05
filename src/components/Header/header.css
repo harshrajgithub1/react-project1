@@ -1,0 +1,42 @@
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d85623;
+    color: #587896;
+    padding: 20px;
+    grid-template-columns: 10 rem 1f 2fr 1fr 10rem;
+  }
+
+  .menu-link ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 50px 0px ;
+  }
+  
+  .menu-link ul li {
+    margin-left: 30px;
+    
+  }
+
+  .menu-link ul li a {
+    color: #0f0f0e;
+    text-decoration: none;
+   
+  }
+
+  .menu-link ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    
+  }
+
+  .menu-link ul li {
+    margin-left: 30px;
+    
+  }
+  
+ 
