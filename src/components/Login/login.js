@@ -1,6 +1,6 @@
 import React from "react";
 import "./login.css";
-
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
