@@ -14,28 +14,33 @@ const header = () => {
             <div className='menu-link'>
                <ul>
                   <li>
-                    <a href='#'>Home</a>
+                    <a href='home'>Home</a>
                   </li>
                   <li>
-                    <a href='#'>Accessories</a>
+                    <a href='blog'>Blog</a>
                   </li>
                   <li>
-                    <a href='#'>About</a>
+                    <a href='About'>About</a>
                   </li>
                   <li>
-                    <a href='#'>Contact Us</a>
+                    <a href='Contact Us'>Contact Us</a>
                   </li>
                   <li>
-                    <a href='#'>Login</a>
+                    <a href='login'>Login</a>
+                  </li>
+                  <li>
+                    <a href='register'>Register</a>
+                  </li>
+                  <li>
+                    <a href='location'>Location</a>
+                  </li>
+                  <li>
+                    <a href='product'>Product</a>
                   </li>
                </ul> 
             </div>            
         </nav>
 
-       {/* <section className='hero-sectopm'>
-        <p>Welcome to</p>
-        <h1>Techanical World</h1>
-       </section>  */}
    </>
   )
 }

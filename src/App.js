@@ -1,20 +1,8 @@
 import React from 'react';
-import Header from './components/Header/header';
-import Footer from './components/Footer/footer';
-import Login from './components/Login/login';
-import registration from './components/RegistrationForm/registration';
-
+import Route from './route/PageRoute';
 const App = () => {
-  return(
- 
-<div>
-<Header/>
-  <Footer/>
- <Login/>
- <registration/>
-</div>
-  
- 
+  return( 
+      <Route/>  
   );
 };
 

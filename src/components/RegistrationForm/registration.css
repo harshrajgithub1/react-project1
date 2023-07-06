@@ -1,0 +1,32 @@
+/* RegistrationForm.css */
+form {
+
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 100px 100px 100px 275px;
+    background-color: rgb(147, 158, 83);
+    padding: 2%;
+  }
+  
+  label {
+    margin-bottom: 1.5rem;
+  }
+  
+  input {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    background-color: #0a0a0a;
+    color: #faf9f9;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #6e3d3d;
+  }
+  
