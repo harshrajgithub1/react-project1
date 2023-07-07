@@ -10,6 +10,7 @@ import About from '../pages_router/About';
 import Contact from '../pages_router/Contact';
 import Location from '../pages_router/Location';
 import Product from '../pages_router/Product';
+import Cart from "../pages_router/Cart";
 
 export default function PageRoute() {
     return (
@@ -25,6 +26,7 @@ export default function PageRoute() {
               <Route path="Contact Us" element={<Contact Us />} />
               <Route path="Location" element={<Location />}/>
               <Route path="Product" element={<Product/>}/>
+              <Route path='Cart' element={<Cart/>}/>
               <Route path="*" element={<NoPage />} />
             </Route>
           </Routes>
