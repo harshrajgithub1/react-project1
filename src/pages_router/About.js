@@ -1,9 +1,11 @@
 import React from 'react'
-const About = () => {
-    return (
-        <div className= "abt"
+import Product from './Product';
 
-    )
-    
-  };
-export default About;
+
+export default function About() {
+  return (
+    <div>
+      <h1>Aboutt</h1>
+    </div>
+  )
+}

@@ -57,14 +57,14 @@ const root = document.getElementById('root');
 ReactDOM.render(
   <React.StrictMode>
   <App/>
-    <Router>
+    {/* <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="blogs" element={<Blogs />} />
         </Route>
       </Routes>
-    </Router>
+    </Router> */}
   </React.StrictMode>,
   root
 );
