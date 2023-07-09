@@ -10,12 +10,15 @@ const header = () => {
                     
                 </h2>
             </div>
-
+             <div >
+             {/* <img src='simon-daoudi-2wFoa040m8g-unsplash.jpg' alt='watch'></img> */}
+</div>
             <div className='menu-link'>
                <ul>
                   <li>
                     
                     <a href='home'>Home</a>
+                    {/* <img src='simon-daoudi-2wFoa040m8g-unsplash.jpg' alt='watch'></img> */}
                   </li>
                   <li>
                     <a href='blog'>Blog</a>
@@ -36,8 +39,9 @@ const header = () => {
                     <a href='location'>Location</a>
                   </li>
                   <li>
-                    <a href='product'>Product</a>
+                    <a href='product'>Product</a>   
                   </li>
+                
                </ul> 
             </div>            
         </nav>
