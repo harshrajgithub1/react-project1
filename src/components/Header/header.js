@@ -1,8 +1,15 @@
+
 import React from 'react'
+import { Fragment } from 'react';
 import "./header.css";
+import classes from './header.css';
+
+
 const header = () => {
   return (
+  
    <>
+    
         <nav className='main-nav'>
             <div className='logo'>
                 <h2>
@@ -41,11 +48,18 @@ const header = () => {
                   <li>
                     <a href='product'>Product</a>   
                   </li>
-                
+                  <Fragment>
+      <header className={classes.header}>
+        
+        <button>Cart</button>
+      </header>
+    </Fragment>
+
                </ul> 
             </div>            
         </nav>
 
+       
    </>
   )
 }
