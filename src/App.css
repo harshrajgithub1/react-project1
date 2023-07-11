@@ -31,3 +31,7 @@
 .dropdown-option:hover {
   background-color: #0e9215;
 }
+
+.box{
+   border: 1px solid gray;
+}

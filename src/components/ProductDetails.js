@@ -1,86 +1,56 @@
 
-
-
-
-
-// import React, { useEffect, useState } from 'react';
-// import { useParams } from 'react-router-dom';
-
-// const DetailsComponent = () => {
-//   const { id } = useParams();
-//   const [item, setItem] = useState(null);
-
-//   useEffect(() => {
-//     // Fetch the item details based on the ID
-//     // For example, make an API call or access data from a local source
-    
-//     console.log(this.props);
-
-//     const fetchItemDetails = async () => {
-//       // Fetch the item details using the ID
-//       const response = await fetch(`/api/items/${id}`);
-//       const itemData = await response.json();
-//       setItem(itemData);
-//     };
-
-//     fetchItemDetails();
-//   }, [id]);
-
-//   if (!item) {
-//     return <div>Loading...</div>;
-//   }
-
-//   return (
-//     <div>
-//       <h2>Details Component</h2>
-//       <h3>{item.name}</h3>
-//       <p>{item.description}</p>
-//     </div>
-//   );
-// };
-
-// export default DetailsComponent;
-
-
-
-
-
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import productsdata from './ProductList';
+import { FaPlus, FaMinus } from "react-icons/fa";
 
-const ItemDetails = () => {
-  const { itemId } = useParams();
-  const [item, setItem] = useState(null);
+const ProductDetails = () => {
+  let productid = useParams();
+let obj={};
+let count=0;
+const increase=()=>{
+  count= count + 1
+}
 
-  useEffect(() => {
-    // Fetch item details based on the itemId from an API or data source
-    const fetchItemDetails = async () => {
-      try {
-        // Replace with your own fetch logic
-        const response = await fetch(`/api/items/${itemId}`);
-        const itemData = await response.json();
-        setItem(itemData);
-      } catch (error) {
-        console.error(error);
-      }
-    };
+const decrease=()=>{
+  count= count - 1
+}
 
-    fetchItemDetails();
-  }, [itemId]);
-
-  if (!item) {
-    return <div>Loading...</div>;
-  }
+let productList = productsdata.filter(x=>x.id==productid.id);
+console.log(productList);
+if(!!productList){
+  obj = productList[0];
+console.log(obj);
+}
 
   return (
-    <div>
-      <h2>{item.name}</h2>
-      <img src={item.imgsrc} alt={item.name} />
-      <p>{item.description}</p>
-      <p>Price: ${item.price}</p>
-      {/* Add more item details here */}
+    <div className='container'>
+      <div className='row'>
+        <div className='col-md-4'>
+          <div className='card'>
+            <img src={obj.imgsrc} alt='product' className='img-responsive'/>
+          </div>
+        </div>
+        <div className='col-md-8'>
+          <h2>{obj.name}</h2>
+          <p>{obj.description}</p>
+          <p>${obj.price}</p>
+          <p>Stars: {obj.ratings}</p>
+          <div className='box'>
+            <button className='btn btn-outline'  onClick={increase}>
+              <FaPlus/>
+            </button>
+            {count}
+            <button className='btn btn-outline' onClick={decrease}>
+            <FaMinus/>
+
+            </button>
+          </div>
+        </div>
+      </div>
+      
     </div>
   );
 };
 
-export default ItemDetails;
+export default ProductDetails;

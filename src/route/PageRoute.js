@@ -23,18 +23,16 @@ export default function PageRoute() {
           <Routes>
             <Route path="/" element={<Layout />}>
               {/* <Route index element={<Home />} /> */}
-              <Route path="home" element={<Home />} /> 
+              <Route index path="home" element={<Home />} /> 
               <Route path="register" element={<RegistrationForm />} />
               <Route path="login" element={<Login />} />
               <Route path="blog" element={<Blogs />} />
               <Route path="about" element={<About />} />
-              <Route path="Contact Us" element={<Contact Us />} />
+              <Route path="Contact Us" element={<Contact />} />
               <Route path="Location" element={<Location />}/>
               <Route path="Product" element={<Product/>}/>
-              <Route path='Cart' element={<Cart/>}/>
-              
-              <Route path="/products" component={<ProductList/>} />
-              <Route path="/product/details/:id" component={<ProductDetails/>} />
+              <Route path='/Cart' element={<Cart/>}/>
+              <Route path="/product/details/:id" element={<ProductDetails/>} />
               
 
               <Route path="*" element={<NoPage />} />

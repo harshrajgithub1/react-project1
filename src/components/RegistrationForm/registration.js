@@ -1,13 +1,13 @@
 
 import "./registration.css";
 import React, { useEffect, useState } from "react";
-// import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const RegistrationForm = () => {
 
-    
+
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [dateOfBirth, setDateOfBirth] = useState('');
@@ -15,7 +15,7 @@ const RegistrationForm = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
-  
+
 
   const handleFirstNameChange = (e) => {
     setFirstName(e.target.value);
@@ -43,93 +43,128 @@ const RegistrationForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (firstName == '' || lastName == '' || dateOfBirth == '' || email == '' || password == '') {
+      toast.error('* All fields are required', {
+        position: toast.POSITION.TOP_RIGHT
+      });
+    }
+    else{
+      toast.success('Successfully Registered', {
+        position: toast.POSITION.TOP_RIGHT
+      });
+    }
     // Handle form submission logic here
     console.log('Submitted:', firstName, lastName, dateOfBirth, email, password);
   };
 
-  // const showToastMessage = () => {
-  //   toast.success('Success Notification !', {
-  //       position: toast.POSITION.TOP_RIGHT
-  //   });
-
+  const showToastMessage = () => {
+    toast.success('Success Notification !', {
+      position: toast.POSITION.TOP_RIGHT
+    });
+  }
 
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="firstName">First Name:</label>
-        <input
-          type="text"
-          id="firstName"
-          value={firstName}
-          onChange={handleFirstNameChange}
-          required
-          placeholder='FirstName'
-        />
-      </div>
-      <div>
-        <label htmlFor="lastName">Last Name:</label>
-        <input
-          type="text"
-          id="lastName"
-          value={lastName}
-          onChange={handleLastNameChange}
-          required
-          placeholder='LastName'
-        />
-      </div>
-      <div>
-        <label htmlFor="dateOfBirth">Date of Birth:</label>
-        <input
-          type="date"
-          id="dateOfBirth"
-          value={dateOfBirth}
-          onChange={handleDateOfBirthChange}
-          required
-        />
-      </div>
-      <div>
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          value={email}
-          onChange={handleEmailChange}
-          required
-          placeholder='abc@outlook.com'
-        />
-      </div>
-      <div>
-        <label htmlFor="password">Password:</label>
-        <input
-          type="password"
-          id="password"
-          value={password}
-          onChange={handlePasswordChange}
-          required
-          placeholder='**********'
-        />
-      </div>
-      <div>
-        <label htmlFor="confirmPassword">Confirm Password:</label>
-        <input
-          type="password"
-          id="confirmPassword"
-          value={confirmPassword}
-          onChange={handleConfirmPasswordChange}
-          required
-          placeholder='**********'
-        />
-      </div>
+    <div className="container">
+      <form onSubmit={handleSubmit} className="registr-form">
+        <div className="row">
+          <h1 className="text-center">Register Form</h1>
+          <hr/>
+        </div>
+        <div className="row">
+          <div className="col-md-6">
+            <label htmlFor="firstName">First Name:</label>
+            <input
+              className="form-control"
+              type="text"
+              id="firstName"
+              value={firstName}
+              onChange={handleFirstNameChange}
+              required
+              placeholder='FirstName'
+            />
+          </div>
+          <div className="col-md-6">
+            <label htmlFor="lastName">Last Name:</label>
+            <input
+              type="text"
+              className="form-control"
+              id="lastName"
+              value={lastName}
+              onChange={handleLastNameChange}
+              required
+              placeholder='LastName'
+            />
+          </div>
 
-      {/* <div>
-            <button onClick={showToastMessage}>Notify</button>
-            <ToastContainer />
-        </div> */}
+        </div>
+        <div className="row">
+          <div className="col-md-6">
+            <label htmlFor="dateOfBirth">Date of Birth:</label>
+            <input
+              className="form-control"
+              type="date"
+              id="dateOfBirth"
+              value={dateOfBirth}
+              onChange={handleDateOfBirthChange}
+              required
+            />
+          </div>
 
-      <button type="submit">Register</button>
 
-    </form>
+          <div className="col-md-6">
+            <label htmlFor="email">Email:</label>
+            <input
+              className="form-control"
+              type="email"
+              id="email"
+              value={email}
+              onChange={handleEmailChange}
+              required
+              placeholder='abc@outlook.com'
+            />
+          </div>
+        </div>
+
+
+        <div className="row">
+          <div className="col-md-6">
+            <label htmlFor="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={handlePasswordChange}
+              required
+              placeholder='**********'
+              className="form-control"
+            />
+          </div>
+          <div className="col-md-6">
+            <label htmlFor="confirmPassword">Confirm Password:</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              value={confirmPassword}
+              onChange={handleConfirmPasswordChange}
+              required
+              placeholder='**********'
+              className="form-control"
+            />
+          </div>
+
+        </div>
+
+
+        <div>
+          <ToastContainer />
+        </div>
+
+        <button type="submit" className="btn btn-success">Register</button>
+
+      </form>
+    </div>
+
   );
 };
 

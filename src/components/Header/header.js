@@ -46,7 +46,7 @@ const header = () => {
                     <a href='location'>Location</a>
                   </li>
                   <li>
-                    <a href='product'>Product</a>   
+                    <a href='/product'>Product</a>   
                   </li>
                   <Fragment>
       <header className={classes.header}>
