@@ -1,4 +1,4 @@
-.cover {
+/* .cover {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,10 +49,11 @@
     justify-content: center;
     align-items: center;
     margin-top: 50px;
-    background-color: black;
+    background-color: rgb(219, 77, 77);
     color: #f3eeee;
     border-radius: 40px;
     cursor: pointer;
+   
      
     background-color: #020202;
     border: none;
@@ -81,7 +82,51 @@
   }
  
   input:focus{
-    outline-color: rgb(106, 145, 167);
+    outline-color: rgb(11, 132, 202);
   }
 
-  
+   */
+
+
+
+
+   /* LoginForm.css */
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+label {
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.social-icon {
+  margin-right: 0.5rem;
+  cursor: pointer;
+}

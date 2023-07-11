@@ -3,7 +3,6 @@
 // import '../../src/index.css'
 // import ProductList from '../components/ProductList';
 // console.log(ProductList);
-
 // export default function Product(){
 // const listItems = ProductList.map(product =>
 //   <li key={product.id}> 
@@ -48,3 +47,4 @@ const listItems = ProductList.map(product =>
 );
   return <ul>{listItems}</ul>;
 }  
+

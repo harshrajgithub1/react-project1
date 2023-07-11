@@ -1,6 +1,9 @@
 
 import "./registration.css";
 import React, { useEffect, useState } from "react";
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
+
 
 const RegistrationForm = () => {
 
@@ -43,6 +46,13 @@ const RegistrationForm = () => {
     // Handle form submission logic here
     console.log('Submitted:', firstName, lastName, dateOfBirth, email, password);
   };
+
+  // const showToastMessage = () => {
+  //   toast.success('Success Notification !', {
+  //       position: toast.POSITION.TOP_RIGHT
+  //   });
+
+
 
   return (
     <form onSubmit={handleSubmit}>
@@ -97,7 +107,7 @@ const RegistrationForm = () => {
           value={password}
           onChange={handlePasswordChange}
           required
-          placeholder='***********'
+          placeholder='**********'
         />
       </div>
       <div>
@@ -108,12 +118,20 @@ const RegistrationForm = () => {
           value={confirmPassword}
           onChange={handleConfirmPasswordChange}
           required
-          placeholder='***********'
+          placeholder='**********'
         />
       </div>
+
+      {/* <div>
+            <button onClick={showToastMessage}>Notify</button>
+            <ToastContainer />
+        </div> */}
+
       <button type="submit">Register</button>
+
     </form>
   );
 };
+
 
 export default RegistrationForm;

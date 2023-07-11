@@ -1,7 +1,10 @@
 import React from 'react';
+import "./ProductList.css";
+import { Link } from 'react-router-dom';
+// import { css } from 'react-select/dist/declarations/src/components/Control';
 
 export const productsdata = [
-    
+   
     {
        
         id:123456781,
@@ -12,7 +15,12 @@ export const productsdata = [
         ratings: 3,
         stockleft: 2,
         productUrl: "veirdo"
+        
+   
+       
+    
     },
+    
     {
         id:123456782,
         name: 'b',
@@ -104,7 +112,6 @@ export const productsdata = [
     }
 
 ]
-
 
 export default productsdata;
 

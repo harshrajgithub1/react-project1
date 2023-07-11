@@ -17,7 +17,6 @@ import ProductDetails from '../components/ProductDetails';
 
 
 
-
 export default function PageRoute() {
     return (
         <BrowserRouter>
@@ -34,7 +33,7 @@ export default function PageRoute() {
               <Route path="Product" element={<Product/>}/>
               <Route path='Cart' element={<Cart/>}/>
               
-              <Route exact path="/products" component={<ProductList/>} />
+              <Route path="/products" component={<ProductList/>} />
               <Route path="/product/details/:id" component={<ProductDetails/>} />
               
 
