@@ -99,11 +99,12 @@
   margin: 25px auto;
   padding: 1%;
   border: 1px solid gray;
+  /* background-image: url('../../assets/back.jpg'); */
 }
-
+/* 
 label {
   margin-bottom: 0.5rem;
-}
+} */
 
 input[type="text"],
 input[type="password"] {
@@ -190,9 +191,3 @@ button {
 }
 
 
-
-
-body {
-  text-align: center;
-  padding-top: 2rem;
-}

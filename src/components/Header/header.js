@@ -4,6 +4,8 @@ import { Fragment } from 'react';
 import "./header.css";
 import classes from './header.css';
 
+const user = JSON.parse(localStorage.getItem('user'));
+
 
 const header = () => {
   return (
@@ -24,26 +26,27 @@ const header = () => {
                <ul>
                   <li>
                     
-                    <a href='home'>Home</a>
+                    <a href='/home'>Home</a>
                     {/* <img src='simon-daoudi-2wFoa040m8g-unsplash.jpg' alt='watch'></img> */}
                   </li>
                   <li>
-                    <a href='blog'>Blog</a>
+                    <a href='/blog'>Blog</a>
                   </li>
                   <li>
-                    <a href='About'>About</a>
+                    <a href='/About'>About</a>
                   </li>
                   <li>
-                    <a href='Contact Us'>Contact Us</a>
+                    <a href='/Contact Us'>Contact Us</a>
+                  </li>
+                  
+                  <li>
+                    <a href='/login'>Login</a>
+                  </li>
+                  <li {...user==null}>
+                    <a href='/register'>Register</a>
                   </li>
                   <li>
-                    <a href='login'>Login</a>
-                  </li>
-                  <li>
-                    <a href='register'>Register</a>
-                  </li>
-                  <li>
-                    <a href='location'>Location</a>
+                    <a href='/location'>Location</a>
                   </li>
                   <li>
                     <a href='/product'>Product</a>   
