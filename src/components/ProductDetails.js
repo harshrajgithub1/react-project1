@@ -41,7 +41,8 @@ console.log(obj);
               <FaPlus/>
             </button>
             {count}
-            <button className='btn btn-outline' onClick={decrease}>
+          
+            <button className='btn btn-outline'  onClick={decrease}>
             <FaMinus/>
 
             </button>

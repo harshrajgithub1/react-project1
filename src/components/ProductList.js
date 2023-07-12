@@ -15,8 +15,6 @@ export const productsdata = [
         ratings: 3,
         stockleft: 2,
         productUrl: "veirdo"
-        
-   
        
     
     },
