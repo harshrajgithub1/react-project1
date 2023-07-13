@@ -57,36 +57,38 @@ export const usersData = [
       "id": 7,
       "first_name": "Lowell",
       "last_name": "Whitefoot",
-      "email": "lwhitefoot6@cyberchimps.com",
+      "email": "modi@gmail.com",
       "gender": "Male",
       "date_of_birth": "08/03/2018",
-      "password": "gZ1){_bqi\"6nYP"
+      "password": "Modi"
     },
     {
       "id": 8,
       "first_name": "Serge",
       "last_name": "Gooderson",
-      "email": "sgooderson7@cnet.com",
+      "email": "ram@gmail.com",
       "gender": "Male",
       "date_of_birth": "16/01/2008",
-      "password": "bJ9.I>2RFn=h\""
+      "password": "Ram"
     },
     {
       "id": 9,
       "first_name": "Fonsie",
       "last_name": "Cordaroy",
-      "email": "fcordaroy8@paginegialle.it",
+      "email": "ankit@gmail.com",
       "gender": "Male",
       "date_of_birth": "24/05/2012",
-      "password": "yO2_N``R"
+      "password": "Ankit"
     },
     {
       "id": 10,
       "first_name": "Anestassia",
       "last_name": "Sleightholm",
-      "email": "asleightholm9@odnoklassniki.ru",
+      "email": "harshrajshrivastava@gmail.com",
       "gender": "Female",
-      "date_of_birth": "26/07/2010",
-      "password": "yT7=f!=R8>H.AA"
+      "date_of_birth": "02/11/1998",
+      "password": "harshrajshrivastava"
     }
+
+   
   ]

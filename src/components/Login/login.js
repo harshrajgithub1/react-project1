@@ -9,6 +9,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './login.css'; 
 import { usersData } from '../../Models/user';
+import { useNavigate } from 'react-router-dom';
 // import back from '../assets/back.jpg';
 
 const LoginForm = () => {
@@ -19,6 +20,8 @@ const LoginForm = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const users = usersData;
+
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -33,6 +36,7 @@ const LoginForm = () => {
         console.log(user);
         if(user.password==password){
           localStorage.setItem("user", JSON.stringify(user));
+          navigate('/home');
           toast.success('Login Success', {
             position: toast.POSITION.BOTTOM_CENTER
           });
@@ -55,6 +59,9 @@ const LoginForm = () => {
       });
     }
   };
+
+
+  
 
   return (
     <div>
@@ -110,7 +117,7 @@ const LoginForm = () => {
 
 
         
-          {/* <FaGoogle className="social-icon" /> */}
+            {/* <FaGoogle className="social-icon" />   */}
 
 
           
@@ -127,6 +134,8 @@ const LoginForm = () => {
 };
 
 export default LoginForm;
+
+
 
 
 
