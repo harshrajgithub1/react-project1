@@ -1,69 +1,79 @@
 
-import React from 'react'
-import { Fragment } from 'react';
+import React from 'react';
 import "./header.css";
-import classes from './header.css';
+import { Link } from 'react-router-dom';
 
 const user = JSON.parse(localStorage.getItem('user'));
+console.log(user);
 
-
-const header = () => {
-  return (
-  
-   <>
-    
-        <nav className='main-nav'>
-            <div className='logo'>
-                <h2>
-                    <span>Technical</span>
-                    
-                </h2>
-            </div>
-             <div >
-             {/* <img src='simon-daoudi-2wFoa040m8g-unsplash.jpg' alt='watch'></img> */}
-</div>
-            <div className='menu-link'>
-               <ul>
-                  <li>
-                    
-                    <a href='/home'>Home</a>
-                    {/* <img src='simon-daoudi-2wFoa040m8g-unsplash.jpg' alt='watch'></img> */}
-                  </li>
-                  <li>
-                    <a href='/blog'>Blog</a>
-                  </li>
-                  <li>
-                    <a href='/About'>About</a>
-                  </li>
-                  <li>
-                    <a href='/Contact Us'>Contact Us</a>
-                  </li>
-                  
-                  <li>
-                    <a href='/login'>Login</a>
-                  </li>
-                  <li {...user==null}>
-                    <a href='/register'>Register</a>
-                  </li>
-                  <li>
-                    <a href='/location'>Location</a>
-                  </li>
-                  <li>
-                    <a href='/product'>Product</a>   
-                  </li>
-                  <Fragment>
-      <header className={classes.header}>
-        
-        <button>Cart</button>
-      </header>
-    </Fragment>
-
-               </ul> 
-            </div>            
-        </nav>
-
-       
-   </>
-  )
+function logout() {
+  localStorage.clear();
+  window.location.href = "/login";
 }
-export default header;
+
+const Header = () => {
+  return (
+    <>
+      <nav className='main-nav'>
+        <div className='logo'>
+          <h2>
+            <span>Technical</span>
+          </h2>
+        </div>
+        <div>
+          {/* <img src='simon-daoudi-2wFoa040m8g-unsplash.jpg' alt='watch'></img> */}
+        </div>
+        <div className='menu-link'>
+          <ul>
+            <li>
+              <Link to='/home'>Home</Link>
+              {/* <img src='simon-daoudi-2wFoa040m8g-unsplash.jpg' alt='watch'></img> */}
+            </li>
+            <li>
+              <Link to='/blog'>Blog</Link>
+            </li>
+            <li>
+              <Link to='/About'>About</Link>
+            </li>
+            <li>
+              <Link to='/Contact Us'>Contact Us</Link>
+            </li>
+
+            <li>
+              <Link to='/location'>Location</Link>
+            </li>
+            <li>
+              <Link to='/product'>Product</Link>
+            </li>
+            {user != null && (
+              <>
+                <li>
+                  <Link to='/cart'>Cart</Link>
+                </li>
+                <li>
+                  <Link to='#' onClick={logout}>Logout</Link>
+                </li>
+              </>
+
+            )}
+
+            {user == null && (
+              <>
+                <li>
+                  <Link to='/login'>Login</Link>
+                </li>
+                <li>
+                  <Link to='/register'>Register</Link>
+                </li>
+              </>
+            )}
+
+
+          </ul>
+        </div>
+      </nav>
+    </>
+  );
+};
+
+export default Header;

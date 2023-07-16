@@ -172,6 +172,7 @@ const LoginForm = () => {
           toast.success('Login Success', {
             position: toast.POSITION.BOTTOM_CENTER,
           });
+          window.location.href='/home';
         } else {
           toast.error('Wrong credential', {
             position: toast.POSITION.BOTTOM_CENTER,

@@ -12,7 +12,6 @@ import Location from '../pages_router/Location';
 import Product from '../pages_router/Product';
 import Cart from "../pages_router/Cart";
 
-import ProductList from '../components/ProductList';
 import ProductDetails from '../components/ProductDetails';
 
 
@@ -31,7 +30,7 @@ export default function PageRoute() {
               <Route path="Contact Us" element={<Contact />} />
               <Route path="Location" element={<Location />}/>
               <Route path="Product" element={<Product/>}/>
-              <Route path='/Cart' element={<Cart/>}/>
+              <Route path='Cart' element={<Cart/>}/>
               <Route path="/product/details/:id" element={<ProductDetails/>} />
               
 

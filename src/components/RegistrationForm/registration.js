@@ -57,12 +57,6 @@ const RegistrationForm = () => {
     console.log('Submitted:', firstName, lastName, dateOfBirth, email, password);
   };
 
-  const showToastMessage = () => {
-    toast.success('Success Notification !', {
-      position: toast.POSITION.TOP_RIGHT
-    });
-  }
-
 
   return (
     <div className="container">
