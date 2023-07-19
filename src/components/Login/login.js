@@ -61,8 +61,6 @@
 //   };
 
 
-  
-
 //   return (
 //     <div>
 //       <h1 className="text-center">Login</h1>
@@ -109,7 +107,7 @@
 // </div>
 
        
-//         <div className="social-icons">
+//         <div className="social-icons" >
 
 
 //         <button type="button" class="login-with-google-btn" >

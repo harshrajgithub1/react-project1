@@ -45,6 +45,9 @@ const Header = () => {
             <li>
               <Link to='/product'>Product</Link>
             </li>
+            <li>
+              <Link to='/subscription'>Subscription</Link>
+            </li>
             {user != null && (
               <>
                 <li>
