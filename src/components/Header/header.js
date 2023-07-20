@@ -17,7 +17,9 @@ const Header = () => {
       <nav className='main-nav'>
         <div className='logo'>
           <h2>
-            <span>Technical</span>
+            <span>
+            <h1>Technical</h1>
+            </span>
           </h2>
         </div>
         <div>

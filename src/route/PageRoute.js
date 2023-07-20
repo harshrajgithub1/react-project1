@@ -15,8 +15,7 @@ import Checkout from "../pages_router/Checkout";
 
 
 import ProductDetails from '../components/ProductDetails';
-
-
+import Paymentform from '../components/Paymentform';
 
 export default function PageRoute() {
     return (
@@ -35,7 +34,7 @@ export default function PageRoute() {
               <Route path='Cart' element={<Cart/>}/>
               <Route path='Checkout' element={<Checkout/>}/>
               <Route path="/product/details/:id" element={<ProductDetails/>} />
-              
+              <Route path='/Paymentform' element={<Paymentform />}/>
 
               <Route path="*" element={<NoPage />} />
             </Route>

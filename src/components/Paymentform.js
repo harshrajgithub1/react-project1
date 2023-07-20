@@ -1,45 +1,78 @@
-import React from 'react';
-import { useForm } from 'react-hook-form';
+
+
+
+import React, { useState } from 'react';
+import './Paymentform.css';
+
 
 
 const PaymentForm = () => {
-  const { handleSubmit, register, errors } = useForm();
+  const [cardNumber, setCardNumber] = useState('');
+  const [expirationDate, setExpirationDate] = useState('');
+  const [cvv, setCVV] = useState('');
+  const [name, setName] = useState('');
 
-  const onSubmit = (data) => {
-    // Handle form submission
-    console.log(data);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Implement the logic to handle the form submission, such as sending the payment details to a server for processing.
+    // You can use payment processing libraries like Stripe or Braintree to handle the payment processing on the server.
+    // For this example, we won't process the payment; we'll just log the payment details.
+    console.log('Payment submitted:');
+    console.log('Card Number:', cardNumber);
+    console.log('Expiration Date:', expirationDate);
+    console.log('CVV:', cvv);
+    console.log('Name:', name);
+
+    // Reset the form after submission
+    setCardNumber('');
+    setExpirationDate('');
+    setCVV('');
+    setName('');
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <label htmlFor="cardNumber">Card Number</label>
-      <input
-        type="text"
-        id="cardNumber"
-        name="cardNumber"
-        ref={register({ required: 'Card number is required' })}
-      />
-      {errors.cardNumber && <span>{errors.cardNumber.message}</span>}
-
-      <label htmlFor="expiryDate">Expiry Date</label>
-      <input
-        type="text"
-        id="expiryDate"
-        name="expiryDate"
-        ref={register({ required: 'Expiry date is required' })}
-      />
-      {errors.expiryDate && <span>{errors.expiryDate.message}</span>}
-
-      <label htmlFor="cvv">CVV</label>
-      <input
-        type="text"
-        id="cvv"
-        name="cvv"
-        ref={register({ required: 'CVV is required' })}
-      />
-      {errors.cvv && <span>{errors.cvv.message}</span>}
-
-      <button type="submit">Pay Now</button>
+    <form onSubmit={handleSubmit}>
+      <label>
+        Card Number:
+        <input
+          type="text"
+          value={cardNumber}
+          onChange={(e) => setCardNumber(e.target.value)}
+          placeholder="1234 5678 9012 3456"
+        />
+      </label>
+      <br />
+      <label>
+        Expiration Date:
+        <input
+          type="text"
+          value={expirationDate}
+          onChange={(e) => setExpirationDate(e.target.value)}
+          placeholder="MM/YY"
+        />
+      </label>
+      <br />
+      <label>
+        CVV:
+        <input
+          type="text"
+          value={cvv}
+          onChange={(e) => setCVV(e.target.value)}
+          placeholder="123"
+        />
+      </label>
+      <br />
+      <label>
+        Name:
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="John Doe"
+        />
+      </label>
+      <br />
+      <button type="submit">Submit Payment</button>
     </form>
   );
 };

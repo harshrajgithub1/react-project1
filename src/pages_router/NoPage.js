@@ -3,7 +3,7 @@ import React from 'react'
 export default function NoPage() {
   return (
     <div>
-      Page not found here
+      Page not found here 
     </div>
   )
 }
