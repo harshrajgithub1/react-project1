@@ -1,0 +1,43 @@
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .card {
+    border: 1px solid #0f0f0f;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .card h3 {
+    margin-top: 10px;
+  }
+  
+  .card p {
+    margin: 5px 0;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* Media query for responsive layout */
+  @media (max-width: 768px) {
+    .col-md-4 {
+      width: 100%;
+    }
+  }
+  
+
+
+  
