@@ -8,12 +8,16 @@ import Blogs from "./pages_router/Blogs";
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 import App from './App';
-
+import { Provider } from 'react-redux';
+import { store } from './store/store';
 const root = document.getElementById('root');
 
 ReactDOM.render(
   <React.StrictMode>
-  <App/>
+    <Provider store={store}>
+    <App/>
+
+    </Provider>
     {/* <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
