@@ -9,10 +9,9 @@ import Blogs from '../pages_router/Blogs';
 import About from '../pages_router/About';
 import Contact from '../pages_router/Contact';
 import Location from '../pages_router/Location';
-import Product from '../pages_router/Product';
-import Cart from "../pages_router/Cart";
+import Product from '../pages_router/Product/Product';
 import Checkout from "../pages_router/Checkout";
-
+import Cart from '../components/Cart/Cart';
 
 import ProductDetails from '../components/ProductDetails';
 import Paymentform from '../components/Paymentform';

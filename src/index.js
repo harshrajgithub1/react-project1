@@ -9,7 +9,7 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 import App from './App';
 import { Provider } from 'react-redux';
-import { store } from './store/store';
+import  store  from './store/index';
 const root = document.getElementById('root');
 
 ReactDOM.render(
