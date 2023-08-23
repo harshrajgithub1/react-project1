@@ -9,7 +9,7 @@ import Blogs from '../pages_router/Blogs';
 import About from '../pages_router/About';
 import Contact from '../pages_router/Contact';
 import Location from '../pages_router/Location';
-import Product from '../pages_router/Product/Product';
+import Product from '../components/Product/Product';
 import Checkout from "../pages_router/Checkout";
 import Cart from '../components/Cart/Cart';
 

@@ -38,8 +38,13 @@
     color: #da5353;
   }
   
-  p.text-muted {
+  /* p.text-muted {
     text-align: center;
     color: #050505;
+  } */
+  .homie-footer{
+    background-color: #1b1b1b;
   }
-  
+  p,h1,h2,h3,h4,h5,h6, a, .nav-link{
+    color:#fff !important ;
+  }

@@ -1,4 +1,4 @@
-
+/* 
 
 .login-form {
   display: flex;
@@ -7,7 +7,6 @@
   margin: 25px auto;
   padding: 1%;
   border: 1px solid gray;
-  /* background-image: url('../../assets/back.jpg'); */
 }
 
 
@@ -96,4 +95,7 @@ button {
   }
 }
 
-
+ */
+.p-20{
+  padding: 20px;
+}

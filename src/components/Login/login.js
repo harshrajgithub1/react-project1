@@ -61,7 +61,13 @@ const LoginForm = () => {
   };
 
   return (
-    <div>
+    <div className='container p-20'>
+      <div className='row'>
+      <div className='col-md-6'>
+      <img src='https://picsum.photos/200/140?grayscale' className='img-responsive'></img>
+      
+      </div>
+      <div className='col-md-6'>
       {isLoggedIn ? (
         <div>
           <h1 className="text-center">Welcome, {localStorage.getItem('user').name}</h1>
@@ -69,17 +75,16 @@ const LoginForm = () => {
         </div>
       ) : (
         <div>
-          <h1 className="text-center">Login</h1>
-          <hr />
           <form className="login-form" onSubmit={handleSubmit}>
             <div className="row">
+          <h1 className="text-center">Login</h1>
               <div className="col-md-12">
                 <label htmlFor="username">Username:</label>
                 <input
                   type="text"
                   id="username"
                   className="form-control"
-                  placeholder="username"
+                  placeholder="Username"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                 />
@@ -96,7 +101,7 @@ const LoginForm = () => {
                 />
               </div>
             </div>
-            <button type="submit">Login</button>
+            <button type="submit" className='btn btn-lg btn-success form-control'>Login</button>
             <br />
             <div className="noaccount">
               <h6>
@@ -117,6 +122,9 @@ const LoginForm = () => {
           <ToastContainer />
         </div>
       )}
+      </div>
+      </div>
+      
     </div>
   );
 };

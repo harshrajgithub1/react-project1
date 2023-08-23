@@ -6,7 +6,7 @@ import Home from "./Home";
 
 const Layout = () => {
   return (
-    <div>
+    <div className='homie'>
       
         <Header/>    
         <Outlet />

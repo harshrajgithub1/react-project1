@@ -5,8 +5,10 @@ import { ToastContainer, toast } from 'react-toastify';
 
 const App = () => {
   return( 
-
+    <div >
       <Route/>  
+
+    </div>
       
   );
 };
