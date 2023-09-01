@@ -91,23 +91,35 @@ export const productsdata = [
         id:123456788,
         name: 'h',
         imgsrc: "https://n4.sdlcdn.com/imgs/j/o/y/Aford-Black-Hiking-Trekking-Boot-SDL911051804-1-8c260.jpeg",
-        stars: "",
-        description: "Rigo - Navy Blue Cotton Regular Fit Women's Jumpsuit ( Pack of 1 )",
+        stars: "3",
+        description: "Aford Black Hiking & Trekking Boot",
         price: 599,
         ratings: 4,
         stockleft: 4,
-        productUrl: "rigo-navy-blue"
+        productUrl: "rigo-navy-blue" 
     },
     {
         id:123456789,
         name:' i',
         imgsrc: "https://n2.sdlcdn.com/imgs/k/k/l/NBOX-Transparent-TPU-Glossy-Cases-SDL759838376-1-cf899.jpg",
-        description: "Aford Black Hiking & Trekking Boot",
+        description: "Iphone",
         price: 599,
         ratings: 4,
         stockleft: 4,
         productUrl: "aford-black"
-    }
+    },
+
+    {
+        id:123456790,
+        name: 'j',
+        imgsrc:"https://www.indiamart.com/proddetail/you-can-win-english-book-22676386388.html",
+        description: "Motivation Book",
+        price:299,
+        ranking:3,
+        stockleft:3,
+        productUrl:"You Can Win"
+    },
+    
 
 ]
 

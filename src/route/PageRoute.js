@@ -2,14 +2,16 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import RegistrationForm from '../components/RegistrationForm/registration';
 import Login from '../components/Login/login';
-import Home from "../pages_router/Home"
+import Home from "../pages_router/Home";
 import Layout from '../pages_router/Layout';
 import NoPage from '../pages_router/NoPage';
 import Blogs from '../pages_router/Blogs';
 import About from '../pages_router/About';
 import Contact from '../pages_router/Contact';
 import Location from '../pages_router/Location';
-import Product from '../pages_router/Product/Product';
+//import Product from '../pages_router/Product/Product';
+
+import Product from '../components/Product/Product';
 import Checkout from "../pages_router/Checkout";
 import Cart from '../components/Cart/Cart';
 
