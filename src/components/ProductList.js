@@ -108,6 +108,17 @@ export const productsdata = [
         stockleft: 4,
         productUrl: "aford-black"
     }
+    ,
+    {
+        id:123456789,
+        name:' i',
+        imgsrc: "https://n2.sdlcdn.com/imgs/k/k/l/NBOX-Transparent-TPU-Glossy-Cases-SDL759838376-1-cf899.jpg",
+        description: "Aford Black Hiking & Trekking Boot newly added",
+        price: 599,
+        ratings: 4,
+        stockleft: 4,
+        productUrl: "aford-black"
+    }
 
 ]
 

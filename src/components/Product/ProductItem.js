@@ -1,4 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { cartActions } from '../../store/cart-slice';
 import Card from '../../pages_router/Card';
@@ -33,38 +35,39 @@ const ProductItem = (props) => {
         img: img
       });
     }
-
+    toast.success('Product added', {
+      position: toast.POSITION.BOTTOM_CENTER,
+    });
     const newCart = {
       totalQuantity: newTotalQuantity,
       items: updatedItems,
     };
 
     dispatch(cartActions.replaceCart(newCart));
-
-    // and then send Http request
-    // fetch('firebase-url', { method: 'POST', body: JSON.stringify(newCart) })
-
-    // dispatch(
-    //   cartActions.addItemToCart({
-    //     id,
-    //     title,
-    //     price,
-    //   })
-    // );
+    
+    
   };
 
   return (
     <li className={classes.item}>
-      <Card>
+      <Card className={classes.fixed_height_400}>
         <header>
           <h3>{name}</h3>
-          <div className={classes.price}>${price.toFixed(2)}</div>
         </header>
-        <img src={img} className='img-responsive'/>
-        <p>{description}</p>
+        <img src={img} className={classes.img_responsive}/>
+        <p>{description.length>90? description.substring(0,87) + '...' : description}</p>
         <div className={classes.actions}>
+          <div className={classes.pull_left}>
+          <div className={classes.price}>${price.toFixed(2)}</div>
+
+          </div>
+          <div className={classes.pull_right}>
           <button onClick={addToCartHandler}>Add to Cart</button>
+            
+          </div>
+          
         </div>
+          <ToastContainer />
       </Card>
     </li>
   );

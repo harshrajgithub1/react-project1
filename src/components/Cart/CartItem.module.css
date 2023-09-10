@@ -56,3 +56,7 @@
     background-color: #4b4b4b;
     color: white;
   }
+  .icon{
+    max-height: 100px;
+    min-height: 100px;
+  }

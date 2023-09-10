@@ -27,7 +27,7 @@ const CartItem = (props) => {
     <li className={classes.item}>
       <header>
         <h3>{title}</h3>
-        <img src={img} className='img-responsive'/>
+        <img src={img} className={classes.icon}/>
         <div className={classes.price}>
           ${total.toFixed(2)}{' '}
           <span className={classes.itemprice}>(${price.toFixed(2)}/item)</span>

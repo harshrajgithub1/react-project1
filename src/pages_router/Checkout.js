@@ -67,7 +67,7 @@ const Cart = () => {
           {products.map((product, index) => (
             <div className='col-md-4' key={index}>
               <div className='card'>
-                <img src={product.imgsrc} alt='product' className='img-responsive' />
+                <img src={product.imgsrc} alt='product' className='img_responsive' />
                 <div>
                   <h3>{product.name}</h3>
                   <p>{product.description}</p>

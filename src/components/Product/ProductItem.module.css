@@ -1,6 +1,9 @@
 .item h3 {
     margin: 0.5rem 0;
     font-size: 1.25rem;
+    color: black !important;
+    padding-left: 10px;
+    text-transform: uppercase;
   }
   
   .item header {
@@ -15,13 +18,31 @@
     background-color: #3a3a3a;
     color: white;
     font-size: 1.5rem;
+    float: left;
   }
   
   .item p {
-    color: #3a3a3a;
+    color: #3a3a3a !important;
   }
   
   .actions {
-    display: flex;
-    justify-content: flex-end;
+    /* display: flex;
+    justify-content: flex-end; */
+  }
+  .fixed_height_400{
+    max-height: 470px;
+    min-height: 470px;
+  }
+  .img_responsive{
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+    max-height: 200px !important;
+    max-height: 300px !important;
+  }
+  .pull_left{
+    float: left;
+  }
+  .pull_right{
+    float: right;
   }

@@ -14,7 +14,9 @@ const Products = (props) => {
     <section className={classes.products}>
       <h2>Buy your favorite products</h2>
       <ul>
+        <div className='row'>
         {ProductList.map((product) => (
+          <div className='col-md-4'>
           <ProductItem
             key={product.id}
             id={product.id}
@@ -23,7 +25,11 @@ const Products = (props) => {
             description={product.description}
             img = {product.imgsrc}
           />
+          </div>
+          
         ))}
+        </div>
+        
       </ul>
     </section>
   );
